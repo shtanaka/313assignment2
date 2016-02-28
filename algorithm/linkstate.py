@@ -51,8 +51,10 @@ class LinkState:
         return shortest_path
 
     def __str__(self):
-        msg = "Average number of transmissions: "
+        msg = " ==== LINKSTATE ==== \n"
+        msg += "Average number of transmissions: "
         msg += str(self.avg_num_transmissions)
-        msg += " - Average shortest paths length: "
+        msg += "\nAverage shortest paths length: "
         msg += str(self.avg_shortest_paths)
+        msg += "\n"
         return msg
