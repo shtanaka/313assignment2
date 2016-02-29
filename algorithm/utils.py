@@ -1,5 +1,34 @@
 import heapq
 
+INF = 1234567
+
+
+def generate(l):
+    k = []
+    for i in l:
+        k.append(i)
+    return k
+
+
+def all_inf(l):
+    r = True
+    for i in l:
+        if i < INF:
+            r = False
+            return r
+    return r
+
+
+def get_max(l):
+    bigger = -1
+    r = -1
+    for i in range(0, len(l)):
+        if bigger < l[i]:
+            if l[i] < INF:
+                bigger = l[i]
+                r = i
+    return r
+
 
 def is_present(heap, value):
     for i in heap:
