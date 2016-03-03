@@ -3,6 +3,13 @@ import heapq
 INF = 1234567
 
 
+def look_choice(l, c):
+    for i in range(0, len(l)):
+        if l[i] == c:
+            return i
+    return None
+
+
 def generate(l):
     k = []
     for i in l:
